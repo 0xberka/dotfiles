@@ -2,8 +2,8 @@
 
 set -eu
 
-ZSH_CONFIG_DIR="~/.config/zsh"
-ZSHRC_FILE="~/.zshrc"
+ZSH_CONFIG_DIR="$HOME/.config/zsh"
+ZSHRC_FILE="$HOME/.zshrc"
 
 # Resolve the directory where the script lives
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -19,7 +19,7 @@ if ! grep -q "ZSH_CONFIG_PATH" "$ZSHRC_FILE" 2>/dev/null; then
     cat << 'EOF' >> "$ZSHRC_FILE"
 
 # --- Custom ZSH Config ---
-export ZSH_CONFIG_PATH="~/.config/zsh"
+export ZSH_CONFIG_PATH="$HOME/.config/zsh"
 [[ -f "$ZSH_CONFIG_PATH/zshrc" ]] && source "$ZSH_CONFIG_PATH/zshrc"
 # --- End Custom ZSH Config ---
 
