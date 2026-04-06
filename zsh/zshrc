@@ -1,0 +1,12 @@
+
+# Default editor
+if command -v nano >/dev/null 2>&1; then
+    export EDITOR="$(which nano)"
+    export VISUAL="$EDITOR"
+else
+    export EDITOR="/usr/bin/vi"
+    export VISUAL="$EDITOR"
+fi
+
+# zsh_aliases
+[[ -f "$ZSH_CONFIG_PATH/zsh_aliases" ]] && source "$ZSH_CONFIG_PATH/zsh_aliases"

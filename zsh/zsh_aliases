@@ -1,0 +1,35 @@
+
+# zshrc
+alias erc="${EDITOR:-nano} ~/.zshrc"
+alias urc="source ~/.zshrc"
+
+# zsh_aliases
+alias eal="${EDITOR:-nano} $ZSH_CONFIG_PATH/zsh_aliases"
+alias ual="source $ZSH_CONFIG_PATH/zsh_aliases"
+
+# clip
+alias clip="xclip -selection clipboard"
+
+# ls
+alias ls="ls --color=auto"
+alias ll="ls -l"
+alias la="ls -A"
+
+# grep
+alias grep="grep --color=auto"
+
+# git
+alias gcl="git clone"
+alias gad="git add"
+alias gss="git status -s"
+alias gls="git ls-files"
+alias gcm="git commit"
+alias glg="git log --graph --decorate --all"
+alias gdf="git diff"
+alias gds="git diff --staged"
+
+# venv
+alias venv="source ~/.venv/bin/activate"
+
+# firefox (temporary)
+alias fire="flatpak update -y org.mozilla.firefox"
