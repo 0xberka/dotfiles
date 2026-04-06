@@ -1,0 +1,26 @@
+#!/bin/bash
+# SOURCE: https://github.com/mohamednasih/automation-scripts
+
+# Make sure bluetoothctl is available
+if ! command -v bluetoothctl &>/dev/null; then
+    echo "$(basename "$0"): bluetoothctl not found. Please install bluez." >&2
+    exit 1
+fi
+
+# Get all paired devices (MAC addresses)
+devices=$(bluetoothctl paired-devices | awk '{print $2}')
+
+if [ -z "$devices" ]; then
+    echo "No paired Bluetooth devices found."
+    exit 0
+fi
+
+read -p "Remove all paired Bluetooth devices? [y/N] " confirm
+[[ "${confirm,,}" == "y" ]] || exit 0
+
+for device in $devices; do
+    echo "Removing $device ..."
+    bluetoothctl remove "$device"
+done
+
+echo "All paired Bluetooth devices removed."
