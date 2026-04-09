@@ -33,3 +33,6 @@ alias venv="source ~/.venv/bin/activate"
 
 # firefox (temporary)
 alias fire="flatpak update -y org.mozilla.firefox"
+
+# valgrind
+alias val="valgrind --leak-check=full --show-leak-kinds=all"
