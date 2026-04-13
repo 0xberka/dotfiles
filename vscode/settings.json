@@ -1,0 +1,8 @@
+{
+    "workbench.panel.defaultLocation": "right",
+    "chat.viewSessions.orientation": "stacked",
+    "editor.minimap.enabled": false,
+
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+}
