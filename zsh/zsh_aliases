@@ -36,3 +36,6 @@ alias fire="flatpak update -y org.mozilla.firefox"
 
 # valgrind
 alias val="valgrind --leak-check=full --show-leak-kinds=all"
+
+# c++
+alias c++="c++ -Wall -Wextra -Wshadow -Wconversion -Wsign-conversion -Weffc++"

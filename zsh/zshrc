@@ -10,3 +10,10 @@ fi
 
 # zsh_aliases
 [[ -f "$ZSH_CONFIG_PATH/zsh_aliases" ]] && source "$ZSH_CONFIG_PATH/zsh_aliases"
+
+# Use emacs keybindings
+bindkey -e
+
+# Map Ctrl+Left/Right escape sequences to word navigation (backward-word / forward-word)
+bindkey '^[[1;5D' backward-word
+bindkey '^[[1;5C' forward-word
