@@ -4,4 +4,5 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Run your command
-"$SCRIPT_DIR/vscode/code" "$@"
+#nohup "$SCRIPT_DIR/vscode/code" "$@" >/dev/null 2>&1 &
+setsid "$SCRIPT_DIR/vscode/code" "$@" >/dev/null 2>&1 < /dev/null &
